@@ -1,0 +1,36 @@
+[
+    {
+        "nomeDoTeste": "Checkout via cartão sem preencher os dados do cartão",
+        "checkout": {
+            "query": "mutation Checkout($items: [CheckoutItemInput!]!, $freight: Float!, $paymentMethod: String!, $cardData: CardDataInput) { checkout(items: $items, freight: $freight, paymentMethod: $paymentMethod, cardData: $cardData) { freight items { productId quantity } paymentMethod } }",
+            "variables": {
+                "items": [
+                    {
+                        "productId": 1,
+                        "quantity": 2
+                    }
+                ],
+                "freight": 0,
+                "paymentMethod": "credit_card"
+            }
+        },
+        "mensagemEsperada": "Dados do cartão obrigatórios para pagamento com cartão"
+    },
+    {
+        "nomeDoTeste": "Checkout via boleto com produto não cadastrado",
+        "checkout": {
+            "query": "mutation Checkout($items: [CheckoutItemInput!]!, $freight: Float!, $paymentMethod: String!, $cardData: CardDataInput) { checkout(items: $items, freight: $freight, paymentMethod: $paymentMethod, cardData: $cardData) { freight items { productId quantity } paymentMethod } }",
+            "variables": {
+                "items": [
+                    {
+                        "productId": 10,
+                        "quantity": 2
+                    }
+                ],
+                "freight": 0,
+                "paymentMethod": "boleto"
+            }
+        },
+        "mensagemEsperada": "Produto não encontrado"
+    }
+]

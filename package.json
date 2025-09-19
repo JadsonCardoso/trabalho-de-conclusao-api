@@ -1,0 +1,41 @@
+{
+  "name": "pgats-2025-02-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "test": "mocha test/**/*.test.js --timeout 10000",
+  "test-rest-external": "mocha test/rest/external/**/*.test.js --timeout 10000 --reporter mochawesome",
+  "test-rest-controller": "mocha test/rest/controller/**/*.test.js --timeout 10000 --reporter mochawesome",
+  "test-graphql-external": "mocha test/graphql/external/**/*.test.js --timeout 10000 --reporter mochawesome",
+  "test-all": "npm run test-rest-controller && npm run test-rest-external",
+  "start": "node rest/server.js",
+  "start-graphql": "node graphql/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JadsonCardoso/pgats-2025-02-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JadsonCardoso/pgats-2025-02-base.git"
+  },
+  "homepage": "https://github.com/JadsonCardoso/pgats-2025-02-base.git#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "chai": "^6.0.1",
+    "express": "^4.21.2",
+    "graphql": "^16.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^11.7.2",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.2",
+    "mochawesome": "^7.1.4"
+  }
+}

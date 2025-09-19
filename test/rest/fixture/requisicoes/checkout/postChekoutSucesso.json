@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "productId": 1,
+            "quantity": 2
+        }
+    ],
+    "freight": 0,
+    "paymentMethod": "credit_card",
+    "cardData": {
+        "number": "123456",
+        "name": "teste cartão",
+        "expiry": "30/05/2029",
+        "cvv": "111"
+    }
+}

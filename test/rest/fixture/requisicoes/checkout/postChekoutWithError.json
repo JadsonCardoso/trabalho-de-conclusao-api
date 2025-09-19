@@ -1,0 +1,30 @@
+[
+    {
+        "nomeDoTeste": "Checkout via cartão sem preencher os dados do cartão, recebo 400",
+        "postCheckout": {
+            "items": [
+                {
+                    "productId": 13,
+                    "quantity": 2
+                }
+            ],
+            "freight": 0,
+            "paymentMethod": "credit_card"
+        },
+        "mensagemEsperada": "Dados do cartão obrigatórios para pagamento com cartão"
+    },
+    {
+        "nomeDoTeste": "Checkout via boleto com produto não cadastrado, recebo 400",
+        "postCheckout": {
+            "items": [
+                {
+                    "productId": 13,
+                    "quantity": 2
+                }
+            ],
+            "freight": 0,
+            "paymentMethod": "boleto"
+        },
+        "mensagemEsperada": "Produto não encontrado"
+    }
+]
