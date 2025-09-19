@@ -9,7 +9,7 @@
     "test-rest-controller": "mocha test/rest/controller/**/*.test.js --timeout 10000 --reporter mochawesome",
     "test-graphql-external": "mocha test/graphql/external/**/*.test.js --timeout 10000 --reporter mochawesome",
     "test-all": "npm run test-rest-controller && npm run test-rest-external",
-    "start": "node rest/server.js",
+    "start-rest": "node rest/server.js",
     "start-graphql": "node graphql/server.js"
   },
   "repository": {
