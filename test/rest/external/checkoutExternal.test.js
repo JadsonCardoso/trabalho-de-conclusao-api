@@ -13,8 +13,11 @@ describe('Checkout External', () => {
             this.token = respostaLogin.body.token;
         });
 
+        beforeEach(async () => {
+            postChekoutSucesso = require('../fixture/requisicoes/checkout/postChekoutSucesso.json');
+        });
+
         it('Quando envio dados válidos no checkout com pagamento via cartão de crédito, recebo uma resposta 200', async function () {
-            const postChekoutSucesso = require('../fixture/requisicoes/checkout/postChekoutSucesso.json');
             const respostaEsperada = require('../fixture/respostas/checkout/quandoEnvioDadosValidosNoCheckoutReceboUmaResposta200.json');
             const resposta = await request(process.env.BASE_URL_REST)
                 .post('/api/checkout')
