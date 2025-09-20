@@ -27,12 +27,12 @@ describe('Checkout Controller', () => {
                 items: [
                     {
                         "productId": 1,
-                        "quantity": 2
+                        "quantity": 4
                     }
                 ],
                 freight: 0,
                 paymentMethod: "credit_card",
-                total: 190
+                total: 380
             });
             const resposta = await request(app)
                 .post('/api/checkout')
@@ -51,20 +51,24 @@ describe('Checkout Controller', () => {
                 items: [
                     {
                         "productId": 1,
-                        "quantity": 2
+                        "quantity": 7
                     }
                 ],
                 freight: 0,
                 paymentMethod: "boleto",
-                total: 200
+                total: 700
             });
             const resposta = await request(app)
                 .post('/api/checkout')
                 .set('Authorization', `Bearer ${token}`)
                 .send(postChekoutSucesso);
             respostaEsperada.paymentMethod = "boleto";
-            respostaEsperada.total = 200;
-            respostaEsperada.valorFinal = 200;
+            respostaEsperada.items = [{
+                productId: 1,
+                quantity: 7
+            }]
+            respostaEsperada.total = 700;
+            respostaEsperada.valorFinal = 700;
             expect(resposta.body).to.deep.equal(respostaEsperada);
             expect(resposta.status).to.equal(200);
         });
@@ -114,7 +118,7 @@ describe('Checkout Controller', () => {
             expect(resposta.body).to.have.property('error', 'Produto não encontrado');
         });
 
-        afterEach( async() => {
+        afterEach(async () => {
             sinon.restore();
         });
     });

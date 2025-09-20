@@ -1,8 +1,8 @@
 {
-  "valorFinal": 190,
+  "valorFinal": 380,
   "userId": 1,
-  "items": [ { "productId": 1, "quantity": 2 } ],
+  "items": [ { "productId": 1, "quantity": 4 } ],
   "freight": 0,
   "paymentMethod": "credit_card",
-  "total": 190
+  "total": 380
 }
