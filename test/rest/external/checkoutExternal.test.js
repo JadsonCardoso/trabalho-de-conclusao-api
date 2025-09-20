@@ -20,9 +20,6 @@ describe('Checkout External', () => {
                 .post('/api/checkout')
                 .set('Authorization', `Bearer ${this.token}`)
                 .send(postChekoutSucesso);
-            respostaEsperada.paymentMethod = resposta.body.paymentMethod;
-            respostaEsperada.total = resposta.body.total;
-            respostaEsperada.valorFinal = resposta.body.valorFinal;
             expect(resposta.body).to.deep.equal(respostaEsperada);
             expect(resposta.status).to.equal(200);
         });
