@@ -6,8 +6,8 @@
             "variables": {
                 "items": [
                     {
-                        "productId": 1,
-                        "quantity": 2
+                        "productId": 785,
+                        "quantity": 25
                     }
                 ],
                 "freight": 0,
@@ -23,8 +23,8 @@
             "variables": {
                 "items": [
                     {
-                        "productId": 10,
-                        "quantity": 2
+                        "productId": 369,
+                        "quantity": 114
                     }
                 ],
                 "freight": 0,

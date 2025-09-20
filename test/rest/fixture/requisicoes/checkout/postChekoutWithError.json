@@ -4,8 +4,8 @@
         "postCheckout": {
             "items": [
                 {
-                    "productId": 13,
-                    "quantity": 2
+                    "productId": 59,
+                    "quantity": 11
                 }
             ],
             "freight": 0,
@@ -18,8 +18,8 @@
         "postCheckout": {
             "items": [
                 {
-                    "productId": 13,
-                    "quantity": 2
+                    "productId": 115,
+                    "quantity": 75
                 }
             ],
             "freight": 0,
