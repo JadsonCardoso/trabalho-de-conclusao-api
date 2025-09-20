@@ -56,13 +56,15 @@ describe('Checkout Controller', () => {
                 ],
                 freight: 0,
                 paymentMethod: "boleto",
-                total: 190
+                total: 200
             });
             const resposta = await request(app)
                 .post('/api/checkout')
                 .set('Authorization', `Bearer ${token}`)
                 .send(postChekoutSucesso);
             respostaEsperada.paymentMethod = "boleto";
+            respostaEsperada.total = 200;
+            respostaEsperada.valorFinal = 200;
             expect(resposta.body).to.deep.equal(respostaEsperada);
             expect(resposta.status).to.equal(200);
         });

@@ -18,7 +18,7 @@ describe('Teste de checkout', () => {
         chekoutSucesso = require('../fixture/requisicoes/checkout/chekoutComSucesso.json');
     });
 
-    it('Teste de chekout com pagamento via cartão de crédito', async () => {
+    it('Teste de checkout com pagamento via cartão de crédito', async () => {
         respostaEsperada = require('../fixture/respostas/validarCheckoutComSucesso.json');
         const respostaCheckout = await request(process.env.BASE_URL_GRAPHQL)
             .post('')
