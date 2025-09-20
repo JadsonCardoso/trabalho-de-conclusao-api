@@ -22,7 +22,7 @@ describe('Teste de checkout', () => {
         respostaEsperada = require('../fixture/respostas/validarCheckoutComSucesso.json');
         const respostaCheckout = await request(process.env.BASE_URL_GRAPHQL)
             .post('')
-            .set('Authorizations', `Bearer ${this.token}`)
+            .set('Authorization', `Bearer ${this.token}`)
             .send(chekoutSucesso);
 
         expect(respostaCheckout.status).to.equal(200);
