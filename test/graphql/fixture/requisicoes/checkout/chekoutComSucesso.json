@@ -4,16 +4,16 @@
         "items": [
             {
                 "productId": 1,
-                "quantity": 2
+                "quantity": 4
             }
         ],
         "freight": 0,
         "paymentMethod": "credit_card",
         "cardData": {
-            "cvv": "12",
-            "name": "teste cartão",
-            "number": "123456",
-            "expiry": "30/05/2029"
+            "cvv": "777",
+            "expiry": "19/12/2053",
+            "name": "teste api trabalho",
+            "number": "1234586"
         }
     }
 }

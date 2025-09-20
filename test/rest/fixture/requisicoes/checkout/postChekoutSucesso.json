@@ -2,15 +2,15 @@
     "items": [
         {
             "productId": 1,
-            "quantity": 2
+            "quantity": 4
         }
     ],
     "freight": 0,
     "paymentMethod": "credit_card",
     "cardData": {
-        "number": "123456",
-        "name": "teste cartão",
-        "expiry": "30/05/2029",
-        "cvv": "111"
+        "number": "1234586",
+        "name": "teste api trabalho",
+        "expiry": "19/12/2053",
+        "cvv": "777"
     }
 }
